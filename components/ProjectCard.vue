@@ -6,7 +6,7 @@
       <div class="p-6">
         <div class="flex flex-row justify-between items-center">
           <div class="my-2">
-            <Folder class="text-indigo-800"></Folder>
+            <FolderIcon class="w-10 h-10 text-indigo-800"></FolderIcon>
           </div>
           <div class="flex flex-row justify-between">
             <div class="mx-1">
@@ -16,7 +16,7 @@
                 rel="noopener noreferrer"
                 :href="projectHref"
                 ><span class="sr-only"></span
-                ><img class="w-6 h-6" src="~assets/icon/external.svg"
+                ><ExternalIcon class="w-6 h-6 text-black"
               /></a>
             </div>
             <div class="mx-1">
@@ -26,8 +26,8 @@
                 rel="noopener noreferrer"
                 :href="projectGithub"
                 ><span class="sr-only">github</span
-                ><img class="w-6 h-6" src="~assets/icon/github_new.svg"
-              /></a>
+                ><GithubIcon class="w-6 h-6 text-black" />
+              </a>
             </div>
           </div>
         </div>
@@ -48,12 +48,12 @@
 </template>
 
 <script>
-import Folder from "../assets/icon/folder.svg?inline";
-import External from "../assets/icon/external.svg?inline";
-import Github from "../assets/icon/github.svg?inline";
+import FolderIcon from "assets/icons/folder.svg?component";
+import ExternalIcon from "assets/icons/external.svg?component";
+import GithubIcon from "assets/icons/github_new.svg?component";
 export default {
   props: ["title", "description", "href", "github", "tech1", "tech2", "tech3"],
-  components: { Folder, External, Github },
+  components: { FolderIcon, ExternalIcon, GithubIcon },
   data() {
     return {
       projectTitle: this.title,
